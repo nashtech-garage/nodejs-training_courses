@@ -1,0 +1,2 @@
+PORT=<Port Server>
+NODE_ENV=[development|prod]
