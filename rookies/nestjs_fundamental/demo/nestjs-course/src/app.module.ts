@@ -13,9 +13,8 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: `${process.cwd()}/src/core/config/env/.${
-        process.env.NODE_ENV
-      }.env`,
+      envFilePath: `${process.cwd()}/src/core/config/env/.${process.env.NODE_ENV
+        }.env`,
       load: [configuration],
       validate,
       expandVariables: true,
@@ -34,4 +33,4 @@ import { AuthModule } from './auth/auth.module';
   ],
   controllers: [AppController],
 })
-export class AppModule {}
+export class AppModule { }

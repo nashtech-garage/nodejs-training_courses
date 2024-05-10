@@ -33,7 +33,9 @@ import { RolesGuard } from 'src/auth/role.guard';
 export class UsersController {
   private readonly logger = new Logger(UsersController.name);
 
-  constructor(private readonly usersService: UsersService) {}
+  constructor(private readonly usersService: UsersService) {
+    
+  }
 
   @Post('register')
   @ApiCreatedResponse({ type: UserEntity })

@@ -1,8 +1,9 @@
 import { NestFactory, HttpAdapterHost, Reflector } from '@nestjs/core';
 import {
-  INestApplication,
+  type INestApplication,
   ValidationPipe,
   ClassSerializerInterceptor,
+  Logger,
 } from '@nestjs/common';
 import helmet from 'helmet';
 import * as compression from 'compression';
@@ -14,7 +15,7 @@ import { PrismaService } from './core/database/prisma.service';
 import { PrismaClientExceptionFilter } from './core/exception/prisma-client-exception.filter';
 import { HttpExceptionFilter } from './core/exception/http-exception.filter';
 
-async function bootstrap(): Promise<void> {
+async function bootstrap() {
   const app: INestApplication = await NestFactory.create(AppModule);
 
   app.enableCors();
@@ -45,5 +46,10 @@ async function bootstrap(): Promise<void> {
   SwaggerModule.setup('api/document', app, document);
 
   await app.listen(port);
+
+  return app;
 }
-bootstrap().catch((err) => console.log('Crashed! ', err));
+bootstrap().then(async (app) => {
+  const url = new URL(await app.getUrl());
+  console.log(`Application is running on port: ${url.port}`);
+}).catch((err) => console.log('Crashed! ', err));
