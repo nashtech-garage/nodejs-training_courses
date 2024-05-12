@@ -1,0 +1,23 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "Toi thu 1 chut thoi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "goi_4_thread": "node fourthreads.js",
+    "start": "node index.js",
+    "debug": "nodemon --trace-warnings index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/vuilendi/abc"
+  },
+  "keywords": [
+    "test",
+    "tranminh",
+    "vuilendi"
+  ],
+  "author": "Tran Minh",
+  "license": "ISC"
+}
