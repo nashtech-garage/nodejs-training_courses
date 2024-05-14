@@ -1,0 +1,16 @@
+{
+  "name": "demo_file_system_upload_file",
+  "version": "1.0.0",
+  "description": "",
+  "main": "upload_file.js",
+  "dependencies": {
+    "formidable": "^1.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node upload_file.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
