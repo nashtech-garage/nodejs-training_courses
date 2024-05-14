@@ -1,0 +1,17 @@
+html
+    head
+        title= title
+    body
+        form(method='POST' action='/create')
+            div.form-group
+                label(for='title') Title:
+                input#title.form-control(type='text', placeholder='Add new title' name='title')
+            div.form-group
+                label(for='description') Description:
+                textarea#description.form-control(placeholder='Add description' name='description')
+            button.btn.btn-primary(type='submit') Add new
+
+        h1= title
+        ul
+            each note in notes
+                li= note.title + ':' + note.description

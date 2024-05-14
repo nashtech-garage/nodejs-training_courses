@@ -1,0 +1,15 @@
+{
+  "name": "demo_email",
+  "version": "1.0.0",
+  "description": "",
+  "main": "send_mail.js",
+  "dependencies": {
+    "nodemailer": "^6.4.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

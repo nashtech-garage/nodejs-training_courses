@@ -1,0 +1,9 @@
+NodeJS Engineers
+- Web Basic & Tooling
+- Database Fundamental
+- Node.js Fundamental, TypeScript Fundamental
+- NestJS Fundamental
+- GraphQL
+- Front-End: Next.js
+- AWS Fundamental
+- Practice in real project
